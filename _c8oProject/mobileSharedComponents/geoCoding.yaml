@@ -1,0 +1,175 @@
+↓DivGeoCoding [ngx.components.UIDynamicElement-1608651712226]: 
+  beanData: '{"ionBean":"DivTag"}'
+  tagName: div
+  ↓FormItem [ngx.components.UIDynamicElement-1608651712241]: 
+    beanData: '{"ionBean":"FormItem"}'
+    tagName: ion-item
+    ↓Label [ngx.components.UIDynamicElement-1608651712244]: 
+      beanData: '{"ionBean":"Label","Position":"plain:floating"}'
+      tagName: ion-label
+      ↓Coordinates [ngx.components.UIText-1608651712247]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Coordinates
+    ↓TextInput [ngx.components.UIDynamicElement-1608651712250]: 
+      beanData: |
+        '{
+         "ionBean": "Input",
+         "Debounce": "plain:0",
+         "Value": "script:(this.global?.address !=undefined && params1608651712223.showAddress) ? this.global?.address?.FormattedAddress : router.sharedObject?.geoCoding?.latitude + '','' + router.sharedObject?.geoCoding?.longitude"
+        }'
+      tagName: ion-input
+  ↓Directive [ngx.components.UIControlDirective-1610189760132]: 
+    directiveName: If
+    directiveSource: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:this.global.bouding != undefined
+    ↓Div [ngx.components.UIDynamicElement-1610189746587]: 
+      beanData: '{"ionBean":"DivTag"}'
+      tagName: div
+      ↓Text [ngx.components.UIText-1610189752503]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:'topLeft :'
+      ↓Text2 [ngx.components.UIText-1610189946294]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'script:''latitude: '' + this.global.bouding.topLeft?.lat'
+      ↓Text21 [ngx.components.UIText-1610190002086]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'script:''longitude:  '' + this.global.bouding.topLeft?.lon'
+    ↓Div1 [ngx.components.UIDynamicElement-1610189923817]: 
+      beanData: '{"ionBean":"DivTag"}'
+      tagName: div
+      ↓Text [ngx.components.UIText-1610190029899]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:'bottomRight:'
+      ↓Text2 [ngx.components.UIText-1610190029902]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'script:''latitude: '' + this.global.bouding.bottomRight?.lat'
+      ↓Text21 [ngx.components.UIText-1610190029905]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: 'script:''longitude:  '' + this.global.bouding.bottomRight?.lon'
+↓PageEvent [ngx.components.UIPageEvent-1608651712253]: 
+  ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1609932476367]: 
+    beanData: '{"ionBean":"InvokeAction"}'
+    stack: lib_Geocoding_Ngx.MobileApplication.Application.getCurrentPosition
+    ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1609936800976]: 
+      beanData: '{"ionBean":"InvokeAction"}'
+      stack: lib_Geocoding_Ngx.MobileApplication.Application.getLocationByLatAndLong
+      ↓latitude [ngx.components.UIControlVariable-1609936813656]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:parent.out.latitude
+      ↓longitude [ngx.components.UIControlVariable-1609936813658]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:parent.out.longitude
+      ↓Address [ngx.components.UIControlVariable-1609936813660]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:true
+      ↓Postcode1 [ngx.components.UIControlVariable-1609936813662]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:true
+      ↓CountryRegion [ngx.components.UIControlVariable-1609936813664]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:true
+      ↓Neighborhood [ngx.components.UIControlVariable-1609936813666]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:false
+      ↓PopulatedPlace [ngx.components.UIControlVariable-1609936813668]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:false
+      ↓AdminDivision1 [ngx.components.UIControlVariable-1609936813670]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:true
+      ↓AdminDivision2 [ngx.components.UIControlVariable-1609936813672]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:false
+      ↓adresse [ngx.components.UIDynamicAction-1609937272602]: 
+        beanData: |
+          '{
+           "ionBean": "SetGlobalAction",
+           "Property": "plain:address",
+           "Value": "script:out?.Address"
+          }'
+    ↓SetGlobal [ngx.components.UIDynamicAction-1609937240032]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:geoCoding",
+         "Value": "script:out"
+        }'
+    ↓maximumAge [ngx.components.UIControlVariable-1609938495171]: 
+      comment: 'Is a positive long value indicating the maximum age in milliseconds of a possible cached position that is acceptable to return. If set to 0, it means that the device cannot use a cached position and must attempt to retrieve the real current position. If set to Infinity the device must return a cached position regardless of its age. Default: 0.'
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:0
+    ↓timeout [ngx.components.UIControlVariable-1609938495173]: 
+      comment: Is a positive long value representing the maximum length of time (in milliseconds) the device is allowed to take in order to return a position. The default value is Infinity, meaning that getCurrentPosition() won't return until the position is available.
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:Infinity
+    ↓enableHighAccuracy [ngx.components.UIControlVariable-1609938495175]: 
+      comment: 'Is a Boolean that indicates the application would like to receive the best possible results. If true and if the device is able to provide a more accurate position, it will do so. Note that this can result in slower response times or increased power consumption (with a GPS chip on a mobile device for example). On the other hand, if false, the device can take the liberty to save resources by responding more quickly and/or using less power. Default: true.'
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1610189605121]: 
+      beanData: '{"ionBean":"InvokeAction"}'
+      stack: lib_Geocoding_Ngx.MobileApplication.Application.getBoundingBoxFromPosition
+      ↓latitude [ngx.components.UIControlVariable-1610189619357]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:parent.out.latitude
+      ↓longitude [ngx.components.UIControlVariable-1610189619359]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:parent.out.longitude
+      ↓margin [ngx.components.UIControlVariable-1610189619361]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:100
+      ↓SetGlobal [ngx.components.UIDynamicAction-1610189712142]: 
+        beanData: |
+          '{
+           "ionBean": "SetGlobalAction",
+           "Property": "plain:bouding",
+           "Value": "script:parent.out"
+          }'
+↓showAddress [ngx.components.UICompVariable-1608719512003]: 
+  value: true

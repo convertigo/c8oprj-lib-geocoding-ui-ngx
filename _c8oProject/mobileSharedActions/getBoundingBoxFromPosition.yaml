@@ -1,0 +1,41 @@
+↓getBoundingBox [ngx.components.UICustomAction-1610189229834]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		const location =  [{lat: vars.params.latitude, lon: vars.params.longitude}];
+          		const margin = vars.params.margin;
+          		const boudingBox = getBoundingBox(location, margin)
+          		resolve(boudingBox);
+          '
+  package_dependencies: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: geolocation-utils
+            - java.lang.String: 
+              - ↑value: 1.2.3
+  page_ts_imports: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: getBoundingBox
+            - java.lang.String: 
+              - ↑value: geolocation-utils
+  ↓params [ngx.components.UIControlVariable-1610189272826]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params
+↓latitude [ngx.components.UIStackVariable-1610189257702]: 
+↓longitude [ngx.components.UIStackVariable-1610189257705]: 
+↓margin [ngx.components.UIStackVariable-1610189456003]: 

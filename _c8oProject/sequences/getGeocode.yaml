@@ -1,0 +1,216 @@
+↓Input_variables [steps.InputVariablesStep-1610013627717]: 
+↓Element [steps.XMLElementStep-1610013266870]: 
+  nodeName: provider
+  nodeText: ${lib_Geocoding.provider}
+  output: false
+↓IfExistThenElse [steps.IfExistThenElseStep-1610013345755]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1610013266870
+        - java.lang.String: 
+          - ↑value: .[text() = 'geo_api_gouv_fr' or text() = '']
+  ↓jThen [steps.ThenStep-1610013346570]: 
+    ↓Call_Transaction [steps.TransactionStep-1610013402304]: 
+      sourceTransaction: lib_Geocoding_Ngx.geo_api_gouv_fr.adresse_reverse
+      ↓lon [variables.StepVariable-1610013417315]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1610013627717
+              - java.lang.String: 
+                - ↑value: ./longitude/text()
+        value: 
+      ↓lat [variables.StepVariable-1610013417317]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1610013627717
+              - java.lang.String: 
+                - ↑value: ./latitude/text()
+        value: 
+    ↓Split [steps.XMLSplitStep-1610015930878]: 
+      output: false
+      regexp: ','
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1610013402304
+            - java.lang.String: 
+              - ↑value: ./document/object/features/object/properties/context/text()
+    ↓Address [steps.XMLComplexStep-1610015595754]: 
+      nodeName: Address
+      ↓AddressLine [steps.XMLElementStep-1610015681588]: 
+        nodeName: AddressLine
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1610013402304
+              - java.lang.String: 
+                - ↑value: ./document/object/features/object/properties/name/text()
+      ↓AddressLine1 [steps.XMLElementStep-1610015868051]: 
+        nodeName: AdminDistrict
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1610015930878
+              - java.lang.String: 
+                - ↑value: ./split[3]/text()
+      ↓AdminDistrict2 [steps.XMLElementStep-1610015991384]: 
+        nodeName: AdminDistrict2
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1610015930878
+              - java.lang.String: 
+                - ↑value: normalize-space(./split[2]/text())
+      ↓AdminDistrict21 [steps.XMLElementStep-1610016100726]: 
+        nodeName: CountryRegion
+        nodeText: France
+      ↓AdminDistrict211 [steps.XMLElementStep-1610016106746]: 
+        nodeName: FormattedAddress
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1610013402304
+              - java.lang.String: 
+                - ↑value: ./document/object/features/object/properties/label/text()
+      ↓AdminDistrict2111 [steps.XMLElementStep-1610016115725]: 
+        nodeName: Locality
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1610013402304
+              - java.lang.String: 
+                - ↑value: ./document/object/features/object/properties/city/text()
+      ↓AdminDistrict21111 [steps.XMLElementStep-1610016131454]: 
+        nodeName: PostalCode
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1610013402304
+              - java.lang.String: 
+                - ↑value: ./document/object/features/object/properties/postcode/text()
+      ↓Intersection [steps.XMLComplexStep-1610016838395]: 
+        nodeName: Intersection
+        ↓Element [steps.XMLElementStep-1610016849758]: 
+          nodeName: BaseStreet
+        ↓Element1 [steps.XMLElementStep-1610016853124]: 
+          nodeName: SecondaryStreet1
+        ↓Element2 [steps.XMLElementStep-1610016853654]: 
+          nodeName: SecondaryStreet2
+        ↓Element3 [steps.XMLElementStep-1610016856607]: 
+          nodeName: IntersectionType
+        ↓Element4 [steps.XMLElementStep-1610016857040]: 
+          nodeName: DisplayName
+    ↓Complex [steps.XMLComplexStep-1610016889801]: 
+      nodeName: BoundingBox
+      ↓Element4 [steps.XMLElementStep-1610016900445]: 
+        nodeName: SouthLatitude
+      ↓Element41 [steps.XMLElementStep-1610016901401]: 
+        nodeName: WestLongitude
+      ↓Element42 [steps.XMLElementStep-1610016901903]: 
+        nodeName: NorthLatitude
+      ↓Element43 [steps.XMLElementStep-1610016902380]: 
+        nodeName: EastLongitude
+  ↓jElse [steps.ElseStep-1610013346572]: 
+    ↓Concat [steps.XMLConcatStep-1610013559694]: 
+      nodeName: point
+      output: false
+      separator: ','
+      sourcesDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: description
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                  - com.twinsoft.convertigo.beans.common.XMLVector: 
+                    - java.lang.String: 
+                      - ↑value: 1610013627717
+                    - java.lang.String: 
+                      - ↑value: ./latitude/text()
+                - java.lang.String: 
+                  - ↑value: ''
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+              - com.twinsoft.convertigo.beans.common.XMLVector: 
+                - java.lang.String: 
+                  - ↑value: description
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+                  - com.twinsoft.convertigo.beans.common.XMLVector: 
+                    - java.lang.String: 
+                      - ↑value: 1610013627717
+                    - java.lang.String: 
+                      - ↑value: ./longitude/text()
+                - java.lang.String: 
+                  - ↑value: ''
+    ↓Call_Transaction [steps.TransactionStep-1608651694094]: 
+      sourceTransaction: lib_Geocoding_Ngx.bingMapsApi.getGeocode
+      ↓point [variables.StepVariable-1608651694097]: 
+        sourceDefinition: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: 1610013559694
+              - java.lang.String: 
+                - ↑value: ./text()
+      ↓includeEntityTypes [variables.StepVariable-1608651694100]: 
+      ↓key [variables.StepVariable-1608651694103]: 
+        value: ${lib_Geocoding.BingsMapsApiKey.secret}
+    ↓Copy [steps.XMLCopyStep-1608651694106]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1608651694094
+            - java.lang.String: 
+              - ↑value: ./document/Response/ResourceSets/ResourceSet/Resources/Location/Address
+    ↓Copy2 [steps.XMLCopyStep-1608651694109]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1608651694094
+            - java.lang.String: 
+              - ↑value: ./document/Response/ResourceSets/ResourceSet/Resources/Location/BoundingBox
+↓includeEntityTypes [variables.RequestableVariable-1608651694115]: 
+↓latitude [variables.RequestableVariable-1610013508695]: 
+↓longitude [variables.RequestableVariable-1610013511292]: 
+↓Test_Case [core.TestCase]: 
+  ↓includeEntityTypes [variables.TestCaseVariable-1608651694125]: 
+    value: Address,Postcode1,CountryRegion
+  ↓key [variables.TestCaseVariable-1608651694128]: 
+    value: AuDqlheb9lLo4YPP-abCkT53ZT8zkUWnNFRw0RE0yjnfXfrCp67l9pVJpenHi1A4
+  ↓latitude [variables.TestCaseVariable-1610013779692]: 
+    value: 48.722626299999995
+  ↓longitude [variables.TestCaseVariable-1610013779694]: 
+    value: 2.4224671

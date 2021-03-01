@@ -1,0 +1,40 @@
+↓getCurrentPosition [ngx.components.UICustomAction-1609932170350]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '		const options = {maximumAge: vars.params.maximumAge, timeout: vars.params.timeout, enableHighAccuracy: vars.params.enableHighAccuracy};
+          		navigator.geolocation.getCurrentPosition((position) => {
+          				let results = {
+          					"latitude": position.coords.latitude,
+          					"longitude": position.coords.longitude,
+          					"altitude": position.coords.altitude,
+          					"accuracy": position.coords.accuracy,
+          					"altitudeAccuracy": position.coords.altitudeAccuracy,
+          					"heading":position.coords.heading,
+          					"speed":position.coords.speed
+          					
+          				};
+          				resolve(results);
+          			},
+          			(error) => {
+          				resolve(error);
+          			},
+          			options
+          		);
+          '
+  ↓params [ngx.components.UIControlVariable-1609937996585]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:params
+↓maximumAge [ngx.components.UIStackVariable-1609937806720]: 
+  comment: 'Is a positive long value indicating the maximum age in milliseconds of a possible cached position that is acceptable to return. If set to 0, it means that the device cannot use a cached position and must attempt to retrieve the real current position. If set to Infinity the device must return a cached position regardless of its age. Default: 0.'
+  value: 0
+↓timeout [ngx.components.UIStackVariable-1609937859553]: 
+  comment: Is a positive long value representing the maximum length of time (in milliseconds) the device is allowed to take in order to return a position. The default value is Infinity, meaning that getCurrentPosition() won't return until the position is available.
+  value: Infinity
+↓enableHighAccuracy [ngx.components.UIStackVariable-1609937914593]: 
+  comment: 'Is a Boolean that indicates the application would like to receive the best possible results. If true and if the device is able to provide a more accurate position, it will do so. Note that this can result in slower response times or increased power consumption (with a GPS chip on a mobile device for example). On the other hand, if false, the device can take the liberty to save resources by responding more quickly and/or using less power. Default: true.'
+  value: true

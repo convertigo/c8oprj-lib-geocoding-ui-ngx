@@ -1,0 +1,68 @@
+↓latitude [ngx.components.UIStackVariable-1609935880366]: 
+↓longitude [ngx.components.UIStackVariable-1609935903999]: 
+↓ComputeParameters [ngx.components.UICustomAction-1609936402455]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          		let includeEntityTypes = "";
+          		const expectedEntityTypes = ["Address", "Neighborhood", "PopulatedPlace", "Postcode1", "AdminDivision1", "AdminDivision2", "CountryRegion"];
+          		expectedEntityTypes
+          		.forEach((entityTypes)=>{
+          			if(vars.params[entityTypes] === true){
+          				includeEntityTypes += ","+entityTypes;
+          			}	
+          		});
+          		//remove first comma if exists
+          		includeEntityTypes = includeEntityTypes.substring(1);
+          		resolve(includeEntityTypes);
+          
+  ↓CallSequence [ngx.components.UIDynamicAction-1609935867569]: 
+    beanData: |
+      '{
+       "ionBean": "CallSequenceAction",
+       "requestable": "plain:lib_Geocoding_Ngx.getGeocode",
+       "noLoading": "plain:true"
+      }'
+    ↓point [ngx.components.UIControlVariable-1609935867572]: 
+      comment: new variable
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:params.latitude + ',' + params.longitude
+    ↓includeEntityTypes [ngx.components.UIControlVariable-1609935867575]: 
+      comment: new variable
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:parent.out
+    ↓latitude [ngx.components.UIControlVariable-1610013459125]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:params.latitude
+    ↓longitude [ngx.components.UIControlVariable-1610013465302]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:params.longitude
+  ↓params [ngx.components.UIControlVariable-1609937092219]: 
+    varValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params
+↓Address [ngx.components.UIStackVariable-1609936191699]: 
+  value: true
+↓Postcode1 [ngx.components.UIStackVariable-1609936257787]: 
+  value: true
+↓CountryRegion [ngx.components.UIStackVariable-1609936306784]: 
+  value: true
+↓Neighborhood [ngx.components.UIStackVariable-1609936309027]: 
+  value: false
+↓PopulatedPlace [ngx.components.UIStackVariable-1609936311264]: 
+  value: false
+↓AdminDivision1 [ngx.components.UIStackVariable-1609936313432]: 
+  value: true
+↓AdminDivision2 [ngx.components.UIStackVariable-1609936372576]: 
+  value: false

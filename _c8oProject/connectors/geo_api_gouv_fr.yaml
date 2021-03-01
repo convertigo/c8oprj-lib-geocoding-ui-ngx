@@ -1,0 +1,10 @@
+https: true
+port: 443
+server: api-adresse.data.gouv.fr
+↓adresse_reverse [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  subDir: reverse/
+  ↓lon [variables.RequestableHttpVariable-1610013154782]: 
+    httpName: lon
+  ↓lat [variables.RequestableHttpVariable-1610013161731]: 
+    httpName: lat
