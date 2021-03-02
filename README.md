@@ -28,16 +28,16 @@ This library is based on severals locations API, to have this:
 
 ## Configuring Convertigo Symbols
 
-__lib_Geocoding__ needs some symbols to be configured. You configure them through the Web Console: **https://&lt;your site&gt;.convertigo.net/admin**, hit the ___symbols___ button to get to the symbol configuration page.
+__lib_Geocoding_Ngx__ needs some symbols to be configured. You configure them through the Web Console: **https://&lt;your site&gt;.convertigo.net/admin**, hit the ___symbols___ button to get to the symbol configuration page.
 
 Symbol  | value
 ------| ------
-lib_Geocoding.provider | Can be "geo_api_gouv_fr" if you wants to use [geo.api.gouv.fr](https://geo.api.gouv.fr/) or "bings_map" if you wants to use [Bing Maps](https://www.bingmapsportal.com/)
-lib_Geocoding.BingsMapsApiKey.secret | Your **API key** value you copied from previous step if you choose [Bing Maps](https://www.bingmapsportal.com/)
+lib_Geocoding_Ngx.provider | Can be "geo_api_gouv_fr" if you wants to use [geo.api.gouv.fr](https://geo.api.gouv.fr/) or "bings_map" if you wants to use [Bing Maps](https://www.bingmapsportal.com/)
+lib_Geocoding_Ngx.BingsMapsApiKey.secret | Your **API key** value you copied from previous step if you choose [Bing Maps](https://www.bingmapsportal.com/)
 
 ## Sequences
 
-__lib_Geocoding__ provides sequences you can call in your projects
+__lib_Geocoding_Ngx__ provides sequences you can call in your projects
 
 Sequence  | Action
 ------| ------

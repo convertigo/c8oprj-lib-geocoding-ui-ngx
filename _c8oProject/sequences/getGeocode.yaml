@@ -1,7 +1,7 @@
 ↓Input_variables [steps.InputVariablesStep-1610013627717]: 
 ↓Element [steps.XMLElementStep-1610013266870]: 
   nodeName: provider
-  nodeText: ${lib_Geocoding.provider}
+  nodeText: ${lib_Geocoding_Ngx.provider}
   output: false
 ↓IfExistThenElse [steps.IfExistThenElseStep-1610013345755]: 
   sourceDefinition: 
@@ -183,7 +183,7 @@
                 - ↑value: ./text()
       ↓includeEntityTypes [variables.StepVariable-1608651694100]: 
       ↓key [variables.StepVariable-1608651694103]: 
-        value: ${lib_Geocoding.BingsMapsApiKey.secret}
+        value: ${lib_Geocoding_Ngx.BingsMapsApiKey.secret}
     ↓Copy [steps.XMLCopyStep-1608651694106]: 
       sourceDefinition: 
         - xmlizable: 
