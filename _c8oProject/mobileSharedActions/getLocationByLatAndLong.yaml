@@ -22,7 +22,7 @@
     beanData: |
       '{
        "ionBean": "CallSequenceAction",
-       "requestable": "plain:lib_Geocoding_Ngx.getGeocode",
+       "requestable": "plain:lib_Geocoding.getGeocode",
        "noLoading": "plain:true"
       }'
     ↓point [ngx.components.UIControlVariable-1609935867572]: 

@@ -1,5 +1,5 @@
-# lib_Geocoding_Ngx
-This is the geocoding library for Convertigo platform when network is reachable. Install this library to geocode coordinates for your Convertigo applications. It is based on Bing Maps location API. The shared component used in this library geocodes automatically browser's coordinates when network is reachable.
+# lib_Geocoding_ui_ngx
+Uses the geocoding library for Convertigo platform when network is reachable. Install this library to geocode coordinates for your Convertigo applications. It is based on Bing Maps location API. The shared component used in this library geocodes automatically browser's coordinates when network is reachable.
 
 # Installation
 
@@ -7,41 +7,9 @@ This is the geocoding library for Convertigo platform when network is reachable.
 
 * In the Dialog 'Project remote URL' field Paste :
 
-        lib_Geocoding_Ngx=https://github.com/convertigo/c8oprj-lib-geocoding-ngx.git
+        lib_Geocoding_ui_ngx=https://github.com/convertigo/c8oprj-lib-geocoding-ui-ngx.git:branch=8.0.0
 
 * And click the 'Finish' button
-* Create all 'Undefined Global Symbols' when prompted
-
-# Usage
-
-## How to get your API Key
-
-This library is based on severals locations API, to have this:
-
-* [geo.api.gouv.fr](https://geo.api.gouv.fr/)
-  * No needs any api key, (bust just working to find French locations )
-* [Bing Maps](https://www.bingmapsportal.com/)
-  * Go to https://www.bingmapsportal.com/ and sign in with your Microsoft account, if you don't have one, create one through the process
-  * Go to "My Account" and click on "My Keys"
-  * Fill out the form and click "Create" and get your API key details
-  * Copy your API key
-
-## Configuring Convertigo Symbols
-
-__lib_Geocoding_Ngx__ needs some symbols to be configured. You configure them through the Web Console: **https://&lt;your site&gt;.convertigo.net/admin**, hit the ___symbols___ button to get to the symbol configuration page.
-
-Symbol  | value
-------| ------
-lib_Geocoding_Ngx.provider | Can be "geo_api_gouv_fr" if you wants to use [geo.api.gouv.fr](https://geo.api.gouv.fr/) or "bings_map" if you wants to use [Bing Maps](https://www.bingmapsportal.com/)
-lib_Geocoding_Ngx.BingsMapsApiKey.secret | Your **API key** value you copied from previous step if you choose [Bing Maps](https://www.bingmapsportal.com/)
-
-## Sequences
-
-__lib_Geocoding_Ngx__ provides sequences you can call in your projects
-
-Sequence  | Action
-------| ------
-getGeocode | Return an object with human-readable address from coordinates. <br>Takes 3 variables :<br> - **point** : The coordinates of the location that you want to reverse geocode. A point is specified by a latitude and a longitude.<br >- **includeEntityTypes** : Specifies the entity types that you want to return in the response. Only the types you specify will be returned. If the point cannot be mapped to the entity types you specify, no location information is returned in the response.<br >
 
 ## Sample Application
 

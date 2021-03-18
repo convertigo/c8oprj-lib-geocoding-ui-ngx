@@ -65,10 +65,10 @@
 ↓PageEvent [ngx.components.UIPageEvent-1608651712253]: 
   ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1609932476367]: 
     beanData: '{"ionBean":"InvokeAction"}'
-    stack: lib_Geocoding_Ngx.MobileApplication.Application.getCurrentPosition
+    stack: lib_Geocoding_ui_ngx.MobileApplication.Application.getCurrentPosition
     ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1609936800976]: 
       beanData: '{"ionBean":"InvokeAction"}'
-      stack: lib_Geocoding_Ngx.MobileApplication.Application.getLocationByLatAndLong
+      stack: lib_Geocoding_ui_ngx.MobileApplication.Application.getLocationByLatAndLong
       ↓latitude [ngx.components.UIControlVariable-1609936813656]: 
         varValue: 
           - xmlizable: 
@@ -148,7 +148,7 @@
           - MobileSmartSourceType: script:true
     ↓InvokeSharedAction1 [ngx.components.UIDynamicInvoke-1610189605121]: 
       beanData: '{"ionBean":"InvokeAction"}'
-      stack: lib_Geocoding_Ngx.MobileApplication.Application.getBoundingBoxFromPosition
+      stack: lib_Geocoding_ui_ngx.MobileApplication.Application.getBoundingBoxFromPosition
       ↓latitude [ngx.components.UIControlVariable-1610189619357]: 
         varValue: 
           - xmlizable: 
