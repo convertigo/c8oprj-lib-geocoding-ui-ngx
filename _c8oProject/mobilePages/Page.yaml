@@ -70,7 +70,7 @@ title: First page
           - MobileSmartSourceType: plain:showAddress = true
   ↓UseSharedComponent [ngx.components.UIUseShared-1608714631216]: 
     sharedcomponent: lib_Geocoding_ui_ngx.MobileApplication.Application.geoCoding
-    ↓showAddress [ngx.components.UIControlVariable-1608719632966]: 
+    ↓showAddress [ngx.components.UIUseVariable-1608719632966]: 
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
@@ -85,7 +85,7 @@ title: First page
           - MobileSmartSourceType: plain:showAddress = false
   ↓UseSharedComponent1 [ngx.components.UIUseShared-1608721210969]: 
     sharedcomponent: lib_Geocoding_ui_ngx.MobileApplication.Application.geoCoding
-    ↓showAddress [ngx.components.UIControlVariable-1608721210972]: 
+    ↓showAddress [ngx.components.UIUseVariable-1608721210972]: 
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType

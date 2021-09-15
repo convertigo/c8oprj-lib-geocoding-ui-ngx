@@ -17,7 +17,7 @@
         '{
          "ionBean": "Input",
          "Debounce": "plain:0",
-         "Value": "script:(this.global?.address !=undefined && params1608651712223.showAddress) ? this.global?.address?.FormattedAddress : router.sharedObject?.geoCoding?.latitude + '','' + router.sharedObject?.geoCoding?.longitude"
+         "Value": "script:(this.global?.address !=undefined && this.showAddress) ? this.global?.address?.FormattedAddress : router.sharedObject?.geoCoding?.latitude + '','' + router.sharedObject?.geoCoding?.longitude"
         }'
       tagName: ion-input
   ↓Directive [ngx.components.UIControlDirective-1610189760132]: 

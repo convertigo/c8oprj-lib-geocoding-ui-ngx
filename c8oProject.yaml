@@ -2,7 +2,7 @@
 ↓lib_Geocoding_ui_ngx [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
-  version: 2.0.0
+  version: 3.0.0
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓MobileBuilderTemplate [references.ProjectSchemaReference]: 
     comment: mobile builder template

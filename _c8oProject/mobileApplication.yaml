@@ -28,7 +28,7 @@ tplProjectName: mobilebuilder_tpl_8_0_0_ngx
 ↓getCurrentPosition [ngx.components.UIActionStack-1609932131682]: 🗏 mobileSharedActions/getCurrentPosition.yaml
 ↓getLocationByLatAndLong [ngx.components.UIActionStack-1609935843608]: 🗏 mobileSharedActions/getLocationByLatAndLong.yaml
 ↓getBoundingBoxFromPosition [ngx.components.UIActionStack-1610189178601]: 🗏 mobileSharedActions/getBoundingBoxFromPosition.yaml
-↓geoCoding [ngx.components.UISharedComponent-1608651712223]: 🗏 mobileSharedComponents/geoCoding.yaml
+↓geoCoding [ngx.components.UISharedRegularComponent-1608651712223]: 🗏 mobileSharedComponents/geoCoding.yaml
 ↓Page [ngx.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
 ↓Theme [ngx.components.UITheme-1491635018260]: 
   comment: Global color themes can be customized here
