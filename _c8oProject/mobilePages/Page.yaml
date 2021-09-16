@@ -24,7 +24,7 @@ title: First page
   ↓ToolBar [ngx.components.UIDynamicElement-1491634231108]: 
     beanData: '{"ionBean":"ToolBar"}'
     tagName: ion-toolbar
-    ↓ButtonSet1 [ngx.components.UIDynamicElement-1614593962967]: 
+    ↓ButtonSet1 [ngx.components.UIDynamicElement-1631787013122]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
       tagName: ion-buttons
       ↓Button [ngx.components.UIDynamicElement-1491634442029]: 
@@ -75,8 +75,50 @@ title: First page
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
           - MobileSmartSourceType: script:true
+    ↓showMap [ngx.components.UIUseVariable-1618916999842]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓showMarkers [ngx.components.UIUseVariable-1618916999844]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓showFields [ngx.components.UIUseVariable-1618916999846]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:false
+    ↓coordinates [ngx.components.UIUseVariable-1618916999848]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: |
+              'script:[
+              {
+              ''latitude'': 48.8427388071459,''longitude'': 2.3264359454772876,''infos'': {
+                          ''title'': ''Burger King'',
+                          ''description'': ''La pire malbouffe du monde''
+                      }
+                  }, 
+                  {
+                      ''latitude'' : 48.85273611109959, 
+                      ''longitude'': 2.350017927136223, 
+                      ''infos'': {
+                          ''title'': ''Notre-Dame de Paris'',
+                          ''description'': ''Cathédrale en reconstruction (pour les JO normalement)''
+                      }
+                  }
+              ]'
+    ↓showFabButton [ngx.components.UIUseVariable-1618921294296]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
   ↓H11 [ngx.components.UIDynamicElement-1608721186346]: 
     beanData: '{"ionBean":"Heading1"}'
+    isEnabled: false
     tagName: h1
     ↓Text [ngx.components.UIText-1608721186349]: 
       textValue: 
@@ -84,6 +126,7 @@ title: First page
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
           - MobileSmartSourceType: plain:showAddress = false
   ↓UseSharedComponent1 [ngx.components.UIUseShared-1608721210969]: 
+    isEnabled: false
     sharedcomponent: lib_Geocoding_ui_ngx.MobileApplication.Application.geoCoding
     ↓showAddress [ngx.components.UIUseVariable-1608721210972]: 
       varValue: 

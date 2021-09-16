@@ -1,5 +1,6 @@
 ↓DivGeoCoding [ngx.components.UIDynamicElement-1608651712226]: 
   beanData: '{"ionBean":"DivTag"}'
+  identifier: initFakeEvent
   tagName: div
   ↓FormItem [ngx.components.UIDynamicElement-1608651712241]: 
     beanData: '{"ionBean":"FormItem"}'
@@ -25,7 +26,7 @@
     directiveSource: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-        - MobileSmartSourceType: script:this.global.bouding != undefined
+        - MobileSmartSourceType: script:this.global.bouding != undefined && this.showFields != false
     ↓Div [ngx.components.UIDynamicElement-1610189746587]: 
       beanData: '{"ionBean":"DivTag"}'
       tagName: div
@@ -62,6 +63,44 @@
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: 'script:''longitude:  '' + this.global.bouding.bottomRight?.lon'
+  ↓Event [ngx.components.UIControlEvent-1618927792631]: 
+    attrName: (blur)
+    eventName: (blur)
+    ↓SetGlobal1 [ngx.components.UIDynamicAction-1618925795693]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:showAddress",
+         "Value": "script:this.showAddress"
+        }'
+    ↓SetGlobal11 [ngx.components.UIDynamicAction-1618925815418]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:showMap",
+         "Value": "script:this.showMap"
+        }'
+    ↓SetGlobal12 [ngx.components.UIDynamicAction-1618925827493]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:showMarkers",
+         "Value": "script:this.showMarkers"
+        }'
+    ↓SetGlobal13 [ngx.components.UIDynamicAction-1618925839250]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:showFields",
+         "Value": "script:this.showFields"
+        }'
+    ↓SetGlobal14 [ngx.components.UIDynamicAction-1618925850237]: 
+      beanData: |
+        '{
+         "ionBean": "SetGlobalAction",
+         "Property": "plain:showFabButton",
+         "Value": "script:this.showFabButton"
+        }'
 ↓PageEvent [ngx.components.UIPageEvent-1608651712253]: 
   ↓InvokeSharedAction [ngx.components.UIDynamicInvoke-1609932476367]: 
     beanData: '{"ionBean":"InvokeAction"}'
@@ -171,5 +210,243 @@
            "Property": "plain:bouding",
            "Value": "script:parent.out"
           }'
+  ↓SetGlobal [ngx.components.UIDynamicAction-1618923200546]: 
+    beanData: |
+      '{
+       "ionBean": "SetGlobalAction",
+       "Property": "plain:showListView",
+       "Value": "script:false"
+      }'
+  ↓initFakeEvent [ngx.components.UICustomAction-1618927514445]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+            		setTimeout(()=> {
+                            page["initFakeEvent"].nativeElement.dispatchEvent(new MouseEvent(''blur'', {
+                                view: window,
+                                bubbles: true,
+                                cancelable: true
+                            }));
+                            // page.c8o.log.debug(''[MB] *** click done :'' );
+                        }, 0)
+            		resolve();
+            '
 ↓showAddress [ngx.components.UICompVariable-1608719512003]: 
-  value: true
+  value: null
+↓showMap [ngx.components.UICompVariable-1618909193811]: 
+  value: null
+↓showMarkers [ngx.components.UICompVariable-1618915352984]: 
+  value: null
+↓showFields [ngx.components.UICompVariable-1618909203036]: 
+  value: null
+↓coordinates [ngx.components.UICompVariable-1618909223141]: 
+  value: null
+↓FabList [ngx.components.UIDynamicElement-1618926244078]: 
+  beanData: '{"ionBean":"FabList","Side":"plain:top"}'
+  isEnabled: false
+  tagName: ion-fab-list
+  ↓FabButton [ngx.components.UIDynamicElement-1618921518422]: 
+    beanData: '{"ionBean":"FabButton"}'
+    tagName: ion-fab-button
+    ↓Event [ngx.components.UIControlEvent-1618922554308]: 
+      isEnabled: false
+      ↓SetGlobal [ngx.components.UIDynamicAction-1618922566725]: 
+        beanData: |
+          '{
+           "ionBean": "SetGlobalAction",
+           "Property": "plain:showListView",
+           "Value": "script:(this.global.showListView) ? false : true"
+          }'
+      ↓Toast [ngx.components.UIDynamicAction-1618926122687]: 
+        beanData: '{"ionBean":"ToastAction","message":"script:this.global.showMap"}'
+  ↓Attr [ngx.components.UIAttribute-1618928954906]: 
+    attrName: bottom
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:
+  ↓Attr1 [ngx.components.UIAttribute-1618928974903]: 
+    attrName: right
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+        - MobileSmartSourceType: plain:
+↓Directive [ngx.components.UIControlDirective-1618922429367]: 
+  directiveExpression: this.global.showFabButton
+  directiveName: If
+  ↓Div [ngx.components.UIDynamicElement-1618921678604]: 
+    beanData: '{"ionBean":"DivTag"}'
+    tagName: div
+    ↓Style [ngx.components.UIStyle-1618921576614]: 
+      styleContent: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '	position: relative;
+              	display: flex;
+              	flex-direction: row-reverse;
+              	top: 80%;
+              	right: 0.15%;
+              	z-index: 9999;
+              '
+    ↓FabButton [ngx.components.UIDynamicElement-1618926707816]: 
+      beanData: '{"ionBean":"FabButton"}'
+      tagName: ion-fab-button
+      ↓Event [ngx.components.UIControlEvent-1618926707819]: 
+        ↓SetGlobal [ngx.components.UIDynamicAction-1618926707822]: 
+          beanData: |
+            '{
+             "ionBean": "SetGlobalAction",
+             "Property": "plain:showListView",
+             "Value": "script:(this.global.showListView) ? false : true"
+            }'
+        ↓showMaps [ngx.components.UIDynamicAction-1618927903313]: 
+          beanData: |
+            '{
+             "ionBean": "SetGlobalAction",
+             "Property": "plain:showMap",
+             "Value": "script:(this.global.showMap) ? false : true"
+            }'
+      ↓Style [ngx.components.UIStyle-1618926707828]: 
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	z-index: 9999 !important;
+                '
+      ↓Icon [ngx.components.UIDynamicElement-1618929846365]: 
+        beanData: '{"ionBean":"Icon","IconName":"script:(this.global.showMap) ? ''list'' : ''map''"}'
+        tagName: ion-icon
+↓Directive2 [ngx.components.UIControlDirective-1618922639663]: 
+  directiveExpression: this.global.showListView
+  directiveName: If
+  ↓Div [ngx.components.UIDynamicElement-1618922699962]: 
+    beanData: '{"ionBean":"DivTag"}'
+    tagName: div
+    ↓ListContainer [ngx.components.UIDynamicElement-1618922734499]: 
+      beanData: '{"ionBean":"List"}'
+      tagName: ion-list
+      ↓Directive [ngx.components.UIControlDirective-1618922769591]: 
+        directiveItemName: item
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:this.coordinates
+        ↓ListItem [ngx.components.UIDynamicElement-1618922818350]: 
+          beanData: '{"ionBean":"ListItem","IonSlot":"plain:end"}'
+          tagName: ion-item
+          ↓Label [ngx.components.UIDynamicElement-1631788767475]: 
+            beanData: '{"ionBean":"Label"}'
+            tagName: ion-label
+            ↓H2 [ngx.components.UIDynamicElement-1618929904708]: 
+              beanData: '{"ionBean":"Heading2"}'
+              tagName: h2
+              ↓Text [ngx.components.UIText-1618922928050]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui_ngx","input":"","model":{"data":[{"priority":1618922769591}],"path":"","prefix":"","suffix":".infos.title","custom":"","useCustom":false}}
+            ↓H4 [ngx.components.UIDynamicElement-1618929800178]: 
+              beanData: '{"ionBean":"Heading4"}'
+              tagName: h4
+              ↓Text [ngx.components.UIText-1618929813467]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui_ngx","input":"","model":{"data":[{"priority":1618922769591}],"path":"","prefix":"","suffix":".infos.description","custom":"","useCustom":false}}
+          ↓Icon [ngx.components.UIDynamicElement-1618922870952]: 
+            beanData: |
+              '{
+               "ionBean": "Icon",
+               "IconName": "plain:home",
+               "IconSlot": "plain:end"
+              }'
+            tagName: ion-icon
+      ↓Style [ngx.components.UIStyle-1618923008267]: 
+        isEnabled: false
+        styleContent: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+            - com.twinsoft.convertigo.beans.common.FormatedContent: 
+              →: |
+                '	position: absolute;
+                	top: 100%;
+                	width: 98.299%;
+                	margin-left: 0.01%;
+                	z-index: 9998;
+                	border: 1px solid red;
+                '
+↓Directive1 [ngx.components.UIControlDirective-1618909261238]: 
+  directiveExpression: this.global.showMap
+  directiveName: If
+  ↓GoogleMap [ngx.components.UIDynamicElement-1618909178779]: 
+    beanData: |
+      '{
+       "ionBean": "GoogleMap",
+       "Latitude": "script:(router.sharedObject?.geoCoding !=undefined) ? router.sharedObject?.geoCoding?.latitude : ''48.6969459''",
+       "Longitude": "script:(router.sharedObject?.geoCoding !=undefined) ? router.sharedObject?.geoCoding?.longitude : ''2.1775981''"
+      }'
+    comment: to fix size, your parent element must have pixel values
+    tagName: agm-map
+    ↓MapMarker [ngx.components.UIDynamicElement-1618909727430]: 
+      beanData: '{"ionBean":"MapMarker"}'
+      isEnabled: false
+      tagName: agm-marker
+    ↓Directive1 [ngx.components.UIControlDirective-1618915513862]: 
+      directiveExpression: == true
+      directiveName: If
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_Geocoding_ui_ngx","input":"","model":{"data":[{"priority":1608651712223}],"path":"?.showMarkers","prefix":"","suffix":"","custom":"","useCustom":false}}
+      ↓Directive [ngx.components.UIControlDirective-1618910037626]: 
+        directiveItemName: item
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:this.coordinates
+        ↓MapMarker [ngx.components.UIDynamicElement-1618910159079]: 
+          beanData: |
+            '{
+             "ionBean": "MapMarker",
+             "Latitude": "source:{\"filter\":\"Iteration\",\"project\":\"lib_Geocoding_ui_ngx\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1618910037626}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".latitude\",\"custom\":\"item1618910037626.latitude\",\"useCustom\":true}}",
+             "Longitude": "source:{\"filter\":\"Iteration\",\"project\":\"lib_Geocoding_ui_ngx\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1618910037626}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".longitude\",\"custom\":\"item1618910037626.longitude\",\"useCustom\":true}}"
+            }'
+          tagName: agm-marker
+          ↓MapInfoWindow [ngx.components.UIDynamicElement-1618913973037]: 
+            beanData: '{"ionBean":"MapInfoWindow"}'
+            tagName: agm-info-window
+            ↓H2 [ngx.components.UIDynamicElement-1618914000310]: 
+              beanData: '{"ionBean":"Heading2"}'
+              tagName: h2
+              ↓Text [ngx.components.UIText-1618914007782]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui_ngx","input":"","model":{"data":[{"priority":1618910037626}],"path":"","prefix":"","suffix":".infos.title","custom":"","useCustom":false}}
+            ↓Paragraph [ngx.components.UIDynamicElement-1618916185640]: 
+              beanData: '{"ionBean":"Paragraph"}'
+              tagName: p
+              ↓Text [ngx.components.UIText-1618916419920]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui_ngx","input":"","model":{"data":[{"priority":1618910037626}],"path":"","prefix":"","suffix":".infos.description","custom":"","useCustom":false}}
+    ↓Style [ngx.components.UIStyle-1618934274145]: 
+      styleContent: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+          - com.twinsoft.convertigo.beans.common.FormatedContent: 
+            →: |
+              '	width: 100%;
+              	height: 100%;
+              '
+↓showFabButton [ngx.components.UICompVariable-1618921204778]: 
+  value: null
+↓showCoordinates [ngx.components.UICompVariable-1618934994091]: 
+  value: null

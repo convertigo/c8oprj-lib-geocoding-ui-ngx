@@ -4,6 +4,7 @@
   corsOrigin: =Origin
   version: 3.0.0
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓formssource_getData [sequences.GenericSequence]: 🗏 sequences/formssource_getData.yaml
   ↓MobileBuilderTemplate [references.ProjectSchemaReference]: 
     comment: mobile builder template
     projectName: mobilebuilder_tpl_8_0_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl.git:branch=mobilebuilder_tpl_8_0_0_ngx:autoPull=true

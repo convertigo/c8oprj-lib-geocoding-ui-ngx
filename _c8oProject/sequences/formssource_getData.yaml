@@ -1,0 +1,78 @@
+comment: |
+  '{
+      "en": {
+          "displayName": "<p>Display health services in Île de France</p>",
+          "comment": "<div>Allows you to list the health services around you, and then display them in a map, or in a list</div>"
+      },
+      "fr": {
+          "displayName": "<p>Afficher les services de santé en Île de France</p>",
+          "comment": "<div>Permet de lister les services de santé, autour de chez vous, pour ensuite les afficher dans une carte, ou dans une liste</div>"
+      },
+      "es": {
+          "displayName": "<p>Mostrar los servicios de salud en Île de France</p>",
+          "comment": "<div>Le permite enumerar los servicios de salud a su alrededor y luego mostrarlos en un mapa o en una lista</div>"
+      },
+      "it": {
+          "displayName": "<p>Mostra servizi sanitari in Île de France</p>",
+          "comment": "<div>Consente di elencare i servizi sanitari nelle vicinanze e di visualizzarli in una mappa o in un elenco</div>"
+      }
+  }'
+↓Read_CSV [steps.ReadCSVStep-1618934597533]: 
+  dataFile: '''.//dataset/urgences.csv'''
+  titleLine: true
+↓Iterator [steps.IteratorStep-1618992561838]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1618934597533
+        - java.lang.String: 
+          - ↑value: ./document/line
+  ↓Complex [steps.XMLComplexStep-1618992581501]: 
+    nodeName: service
+    ↓jSource1 [steps.SimpleSourceStep-1618993070699]: 
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1618992561838
+            - java.lang.String: 
+              - ↑value: ./geo/text()
+      variableName: jCoordinates
+    ↓splitGeoPoint [steps.SimpleStep-1618992811261]: 
+      expression: |
+        //todo
+        var coordinates = jCoordinates.split(",")
+        
+        jLongitude = coordinates[1].trim();
+        jLatitude = coordinates[0].trim();
+    ↓Complex [steps.XMLComplexStep-1618992772251]: 
+      nodeName: coordinates
+      ↓jElement [steps.ElementStep-1618993088305]: 
+        expression: jLongitude
+        nodeName: longitude
+      ↓jElement_1 [steps.ElementStep-1618993126410]: 
+        expression: jLatitude
+        nodeName: latitude
+    ↓Element [steps.XMLElementStep-1618999914045]: 
+      nodeName: title
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1618992561838
+            - java.lang.String: 
+              - ↑value: ./title/text()
+    ↓Element1 [steps.XMLElementStep-1618999918402]: 
+      nodeName: description
+      sourceDefinition: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: 1618992561838
+            - java.lang.String: 
+              - ↑value: ./desc/text()
