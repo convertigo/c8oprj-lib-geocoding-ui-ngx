@@ -332,7 +332,6 @@
       beanData: '{"ionBean":"List"}'
       tagName: ion-list
       ↓Directive [ngx.components.UIControlDirective-1618922769591]: 
-        directiveItemName: item
         directiveSource: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
@@ -350,7 +349,7 @@
                 textValue: 
                   - xmlizable: 
                     - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui_ngx","input":"","model":{"data":[{"priority":1618922769591}],"path":"","prefix":"","suffix":".infos.title","custom":"","useCustom":false}}
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_Geocoding_ui_ngx","input":"","model":{"data":[{"priority":1618922769591}],"path":"","prefix":"","suffix":".infos.title","custom":"$any(item1618922769591).infos.title","useCustom":false}}
             ↓H4 [ngx.components.UIDynamicElement-1618929800178]: 
               beanData: '{"ionBean":"Heading4"}'
               tagName: h4
@@ -405,7 +404,6 @@
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
           - MobileSmartSourceType: source:{"filter":"Shared","project":"lib_Geocoding_ui_ngx","input":"","model":{"data":[{"priority":1608651712223}],"path":"?.showMarkers","prefix":"","suffix":"","custom":"","useCustom":false}}
       ↓Directive [ngx.components.UIControlDirective-1618910037626]: 
-        directiveItemName: item
         directiveSource: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
