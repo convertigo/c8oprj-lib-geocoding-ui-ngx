@@ -1,8 +1,18 @@
-↑convertigo: 8.0.0.m006
+↑convertigo: 8.1.0.m006
 ↓lib_Geocoding_ui_ngx [core.Project]: 
-  comment: Convertigo Mobile builder Project
+  comment: |
+    '{
+        "en": {
+            "displayName": "Additional Connectors and Data sources",
+            "comment": "<iframe style=''width:100%; border:none; height:300px'' border=''0'' src=''https://www.convertigo.com/addtional-connectors-and-data-sources-for-convertigo-no-code-studio''></iframe>"
+        },
+        "fr": {
+            "displayName": "Sources de données and Connecteurs additionnels",
+            "comment": "<iframe style=''width:100%; border:none; height:300px'' border=''0'' src=''https://www.convertigo.com/addtional-connectors-and-data-sources-for-convertigo-no-code-studio''></iframe>"
+        }
+    }'
   corsOrigin: =Origin
-  version: 3.0.0
+  version: 3.0.1
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓formssource_getData [sequences.GenericSequence]: 🗏 sequences/formssource_getData.yaml
   ↓MobileBuilderTemplate [references.ProjectSchemaReference]: 
