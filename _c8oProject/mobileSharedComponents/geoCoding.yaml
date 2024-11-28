@@ -3,7 +3,7 @@
   identifier: initFakeEvent
   tagName: div
   ↓FormItem [ngx.components.UIDynamicElement-1608651712241]: 
-    beanData: '{"ionBean":"FormItem","DetailIconName":"plain:chevron-forward"}'
+    beanData: '{"ionBean":"FormItem"}'
     tagName: ion-item
     ↓Label [ngx.components.UIDynamicElement-1608651712244]: 
       beanData: '{"ionBean":"Label","Position":"plain:floating"}'
@@ -320,13 +320,7 @@
                 '	z-index: 9999 !important;
                 '
       ↓Icon [ngx.components.UIDynamicElement-1618929846365]: 
-        beanData: |
-          '{
-           "ionBean": "Icon",
-           "IconName": "script:(this.global.showMap) ? ''list'' : ''map''",
-           "IconMdName": "plain",
-           "IconIosName": "plain"
-          }'
+        beanData: '{"ionBean":"Icon","IconName":"script:(this.global.showMap) ? ''list'' : ''map''"}'
         tagName: ion-icon
 ↓Directive2 [ngx.components.UIControlDirective-1618922639663]: 
   directiveExpression: this.global.showListView
@@ -343,12 +337,7 @@
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: script:this.coordinates
         ↓ListItem [ngx.components.UIDynamicElement-1618922818350]: 
-          beanData: |
-            '{
-             "ionBean": "ListItem",
-             "DetailIconName": "plain:chevron-forward",
-             "IonSlot": "plain:end"
-            }'
+          beanData: '{"ionBean":"ListItem","IonSlot":"plain:end"}'
           tagName: ion-item
           ↓Label [ngx.components.UIDynamicElement-1631788767475]: 
             beanData: '{"ionBean":"Label"}'
@@ -374,8 +363,6 @@
               '{
                "ionBean": "Icon",
                "IconName": "plain:home",
-               "IconMdName": "plain",
-               "IconIosName": "plain",
                "IconSlot": "plain:end"
               }'
             tagName: ion-icon

@@ -46,13 +46,7 @@ title: First page
         beanData: '{"ionBean":"Button"}'
         tagName: ion-button
         ↓Icon [ngx.components.UIDynamicElement-1491634637555]: 
-          beanData: |
-            '{
-             "ionBean": "Icon",
-             "IconName": "plain:ellipsis-vertical-outline",
-             "IconMdName": "plain",
-             "IconIosName": "plain"
-            }'
+          beanData: '{"ionBean":"Icon","IconName":"plain:ellipsis-vertical-outline"}'
           tagName: ion-icon
 ↓Content [ngx.components.UIDynamicElement-1489674805352]: 
   beanData: '{"ionBean":"Content"}'

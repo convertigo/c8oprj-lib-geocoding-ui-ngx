@@ -1,4 +1,4 @@
-↑convertigo: 8.1.0.m006
+↑convertigo: 8.0.0.m006
 ↓lib_Geocoding_ui_ngx [core.Project]: 
   comment: |
     '{
@@ -19,7 +19,7 @@
     comment: mobile builder template
     projectName: mobilebuilder_tpl_8_0_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl.git:branch=mobilebuilder_tpl_8_0_0_ngx:autoPull=true
   ↓Project_reference [references.ProjectSchemaReference]: 
-    projectName: lib_Geocoding=https://github.com/convertigo/c8oprj-lib-geocoding.git:branch=7.9.0
+    projectName: lib_Geocoding=https://github.com/convertigo/c8oprj-lib-geocoding.git:branch=1.0.4
   ↓MobileApplication [core.MobileApplication]: 
     comment: Describes the mobile application global properties
     splashRemoveMode: beforeUpdate
