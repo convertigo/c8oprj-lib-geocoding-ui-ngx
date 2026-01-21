@@ -1,4 +1,4 @@
-↑convertigo: 8.0.0.m006
+↑convertigo: 8.4.0.m006
 ↓lib_Geocoding_ui_ngx [core.Project]: 
   comment: |
     '{
@@ -12,12 +12,11 @@
         }
     }'
   corsOrigin: =Origin
-  version: 3.0.2
+  version: 8.4.0.0
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓formssource_getData [sequences.GenericSequence]: 🗏 sequences/formssource_getData.yaml
-  ↓MobileBuilderTemplate [references.ProjectSchemaReference]: 
-    comment: mobile builder template
-    projectName: mobilebuilder_tpl_8_0_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl.git:branch=mobilebuilder_tpl_8_0_0_ngx:autoPull=true
+  ↓project [references.ProjectSchemaReference]: 
+    projectName: mobilebuilder_tpl_8_4_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_8_4_0_ngx.zip
   ↓Project_reference [references.ProjectSchemaReference]: 
     projectName: lib_Geocoding=https://github.com/convertigo/c8oprj-lib-geocoding.git:branch=1.0.4
   ↓MobileApplication [core.MobileApplication]: 

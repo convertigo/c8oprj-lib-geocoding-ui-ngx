@@ -3,7 +3,7 @@
   identifier: initFakeEvent
   tagName: div
   ↓FormItem [ngx.components.UIDynamicElement-1608651712241]: 
-    beanData: '{"ionBean":"FormItem"}'
+    beanData: '{"ionBean":"FormItem","DetailIconName":"plain:chevron-forward"}'
     tagName: ion-item
     ↓Label [ngx.components.UIDynamicElement-1608651712244]: 
       beanData: '{"ionBean":"Label","Position":"plain:floating"}'
@@ -17,6 +17,7 @@
       beanData: |
         '{
          "ionBean": "Input",
+         "DoubleBinding": "script",
          "Debounce": "plain:0",
          "Value": "script:(this.global?.address !=undefined && this.showAddress) ? this.global?.address?.FormattedAddress : router.sharedObject?.geoCoding?.latitude + '','' + router.sharedObject?.geoCoding?.longitude"
         }'
@@ -261,7 +262,12 @@
            "Value": "script:(this.global.showListView) ? false : true"
           }'
       ↓Toast [ngx.components.UIDynamicAction-1618926122687]: 
-        beanData: '{"ionBean":"ToastAction","message":"script:this.global.showMap"}'
+        beanData: |
+          '{
+           "ionBean": "ToastAction",
+           "message": "script:this.global.showMap",
+           "cssClass": "plain:"
+          }'
   ↓Attr [ngx.components.UIAttribute-1618928954906]: 
     attrName: bottom
     attrValue: 
@@ -320,7 +326,13 @@
                 '	z-index: 9999 !important;
                 '
       ↓Icon [ngx.components.UIDynamicElement-1618929846365]: 
-        beanData: '{"ionBean":"Icon","IconName":"script:(this.global.showMap) ? ''list'' : ''map''"}'
+        beanData: |
+          '{
+           "ionBean": "Icon",
+           "IconName": "script:(this.global.showMap) ? ''list'' : ''map''",
+           "IconMdName": "plain",
+           "IconIosName": "plain"
+          }'
         tagName: ion-icon
 ↓Directive2 [ngx.components.UIControlDirective-1618922639663]: 
   directiveExpression: this.global.showListView
@@ -337,7 +349,12 @@
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
             - MobileSmartSourceType: script:this.coordinates
         ↓ListItem [ngx.components.UIDynamicElement-1618922818350]: 
-          beanData: '{"ionBean":"ListItem","IonSlot":"plain:end"}'
+          beanData: |
+            '{
+             "ionBean": "ListItem",
+             "DetailIconName": "plain:chevron-forward",
+             "IonSlot": "plain:end"
+            }'
           tagName: ion-item
           ↓Label [ngx.components.UIDynamicElement-1631788767475]: 
             beanData: '{"ionBean":"Label"}'
@@ -363,6 +380,8 @@
               '{
                "ionBean": "Icon",
                "IconName": "plain:home",
+               "IconMdName": "plain",
+               "IconIosName": "plain",
                "IconSlot": "plain:end"
               }'
             tagName: ion-icon

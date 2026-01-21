@@ -9,6 +9,17 @@
           		const boudingBox = getBoundingBox(location, margin)
           		resolve(boudingBox);
           '
+  app_ts_imports: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: '{ getBoundingBox }'
+            - java.lang.String: 
+              - ↑value: geolocation-utils
   package_dependencies: 
     - xmlizable: 
       - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
@@ -20,17 +31,6 @@
               - ↑value: geolocation-utils
             - java.lang.String: 
               - ↑value: 1.2.3
-  page_ts_imports: 
-    - xmlizable: 
-      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-      - com.twinsoft.convertigo.beans.common.XMLVector: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
-          - com.twinsoft.convertigo.beans.common.XMLVector: 
-            - java.lang.String: 
-              - ↑value: getBoundingBox
-            - java.lang.String: 
-              - ↑value: geolocation-utils
   ↓params [ngx.components.UIControlVariable-1610189272826]: 
     varValue: 
       - xmlizable: 

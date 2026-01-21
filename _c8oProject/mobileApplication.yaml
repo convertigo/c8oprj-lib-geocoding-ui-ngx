@@ -23,7 +23,7 @@ componentScriptContent:
         /*Begin_c8o_AppFunction*/
         	/*End_c8o_AppFunction*/
         
-tplProjectName: mobilebuilder_tpl_8_0_0_ngx
+tplProjectName: mobilebuilder_tpl_8_4_0_ngx
 ↓Menu [ngx.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
 ↓getCurrentPosition [ngx.components.UIActionStack-1609932131682]: 🗏 mobileSharedActions/getCurrentPosition.yaml
 ↓getLocationByLatAndLong [ngx.components.UIActionStack-1609935843608]: 🗏 mobileSharedActions/getLocationByLatAndLong.yaml
