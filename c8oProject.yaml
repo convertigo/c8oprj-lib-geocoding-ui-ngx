@@ -12,13 +12,13 @@
         }
     }'
   corsOrigin: =Origin
-  version: 8.4.0.0
+  version: 8.4.0.1
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓formssource_getData [sequences.GenericSequence]: 🗏 sequences/formssource_getData.yaml
   ↓project [references.ProjectSchemaReference]: 
     projectName: mobilebuilder_tpl_8_4_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_8_4_0_ngx.zip
   ↓Project_reference [references.ProjectSchemaReference]: 
-    projectName: lib_Geocoding=https://github.com/convertigo/c8oprj-lib-geocoding.git:branch=1.0.4
+    projectName: lib_Geocoding=https://github.com/convertigo/c8oprj-lib-geocoding.git:branch=1.0.5
   ↓MobileApplication [core.MobileApplication]: 
     comment: Describes the mobile application global properties
     splashRemoveMode: beforeUpdate
